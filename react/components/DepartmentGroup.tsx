@@ -14,7 +14,7 @@ type Category = {
 
 const DepartmentGroup = ({ departments, handleSetSlug }: Props) => {
   const onHandleSetSlug = (event: any) => {
-    handleSetSlug(event.target.value)
+    handleSetSlug(`${event.target.value}/$\{term\}&map=ft`)
   }
 
   const departmentOptions: any = departments.map((department: Category) => {
